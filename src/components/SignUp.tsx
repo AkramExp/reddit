@@ -2,12 +2,16 @@ import React from "react";
 import { Icons } from "./Icons";
 import Link from "next/link";
 import UserAuthForm from "./UserAuthForm";
+import Image from "next/image";
 
 const SignUp = () => {
   return (
     <div className="container mx-auto flex w-full flex-col justify-center space-y-6 sm:w-[400px]">
       <div className="flex flex-col space-y-2 text-center">
-        <Icons.logo className="mx-auto h-6 w-6" />
+        <div className="w-full flex items-center justify-center">
+          <Image src={"/reddit-icon.svg"} alt="reddit" width={35} height={35} />
+        </div>
+        {/* <Icons.logo className="mx-auto h-6 w-6" /> */}
         <h1 className="text-2xl font-semibold tracking-tight">
           Create an Account
         </h1>

@@ -17,7 +17,7 @@ type pageProps = {
 };
 
 const page = async ({ params }: pageProps) => {
-  const cachedPost = await redis.hgetall(`post:${params.postId}`);
+  const cachedPost: any = null;
 
   let post:
     | (Post & { votes: Vote[]; author: User; comments: Comment[] })
